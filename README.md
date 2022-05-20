@@ -1,6 +1,6 @@
 # Encode Decode Conversion Project Requirements
 
-Encode Decode Conversion is a React Web App [Live](https://encoded-decoded.netlify.app/)
+Encode Decode Conversion is a React Web App [Live Project](https://encoded-decoded.netlify.app/)
 
 ## Total Pages: 04
 
