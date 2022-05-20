@@ -122,9 +122,9 @@ const Decode = () => {
 
   return (
     <div className="hero min-h-screen bg-indigo-50 shadow-lg shadow-indigo-300">
-      <div className="card flex-shrink-0 w-full max-w-xl shadow-2xl bg-base-100">
+      <div data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000" className="card flex-shrink-0 w-full max-w-xl shadow-2xl bg-base-100">
         <div className="card-body">
-        <form onClick={handelDecode} >
+        <form data-aos="flip-down" data-aos-delay="600" data-aos-duration="1000" onClick={handelDecode} >
           <div className="form-control">
             <label className="label">
               <span className="label-text text-indigo-600 font-semibold">Input Text</span>
@@ -134,7 +134,7 @@ const Decode = () => {
              onChange={(e) => setInputValue(e.target.value)}
               type="text"
               placeholder="Type your encoded Text..."
-              className="input input-bordered"
+              className="input input-bordered shadow-lg shadow-gray-200"
             />
           </div>
           <div className="form-control mt-6">
@@ -152,14 +152,14 @@ const Decode = () => {
               className="input input-bordered"
             /> */}
             <label className="label">
-              <Link to="/encode" className="label-text-alt text-cyan-500 text-sm  link link-hover">
+              <Link  to="/encode" className="label-text-alt text-cyan-500 text-sm  link link-hover">
                 Encode Text?
               </Link>
             </label>
             </div>
           
         </form>
-        <p className="  py-5 rounded px-3 border-2">{encodeValue}</p>
+        <p data-aos="fade-down" data-aos-delay="900" data-aos-duration="1000" className=" shadow-lg shadow-gray-200  py-5 rounded px-3 border-2">{encodeValue}</p>
         </div>
       </div>
     </div>

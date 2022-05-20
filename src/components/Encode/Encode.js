@@ -59,34 +59,11 @@ const alphabet = [
 const Encode = () => {
   const [inputValue, setInputValue] = useState("");
   const [encodeValue, setEncodeValue] = useState("");
-//   const previousInputValue = useRef("");
-//   useEffect(() => {
-//     previousInputValue.current = inputValue;
-    
-//     const shiftNumber = 3;
-//     const length = alphabet.length;
-//     let ans = "";
-//     let ranNewPosition = ""
-//     let x = Math.floor((Math.random() * 9)+1);
 
-//     for (let i = 0; i < inputValue.length; i++) {
-//       if (inputValue[i] === " ") {
-//         ans += ".";
-//       } else {
-//         let position = alphabet.indexOf(inputValue[i]);
-//         let newPosition = (position + shiftNumber) % length;
-        
-//         ans += alphabet[newPosition];
-//          ranNewPosition = x + ans;
-//       }
-//     }
-//     // console.log(ans);
-//     setEncodeValue(ranNewPosition);
-//   }, [inputValue]);
 
   const handelEncode= e=>{
     e.preventDefault()
-      // setInputValue(e.target.value)
+     
         let inputString = inputValue
         const shiftNumber = 3;
         const length = alphabet.length;
@@ -107,17 +84,16 @@ const Encode = () => {
           }
         }
     
-    console.log(inputString)
-     console.log(ranNewPosition);
+   
     setEncodeValue(ranNewPosition);
     
   }
 
   return (
     <div className="hero min-h-screen shadow-lg shadow-indigo-300">
-      <div className="card flex-shrink-0 w-full max-w-xl  shadow-2xl bg-base-100">
+      <div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000" className="card flex-shrink-0 w-full max-w-xl  shadow-2xl bg-base-100">
         <div className="card-body">
-        <form onClick={handelEncode} >
+        <form data-aos="flip-up" data-aos-delay="600" data-aos-duration="1000" onClick={handelEncode} >
           <div   className="form-control">
             <label className="label">
               <span className="label-text text-indigo-600 font-semibold">Input Text</span>
@@ -127,7 +103,7 @@ const Encode = () => {
               onChange={(e) => setInputValue(e.target.value)}
               type="text"
               placeholder="Type your message..."
-              className="input input-bordered"
+              className="input input-bordered shadow-lg shadow-gray-200"
             />
             {/* <h2>Current Value: </h2>
             <h2>Previous Value: {previousInputValue.current}</h2> */}
@@ -149,7 +125,7 @@ const Encode = () => {
             </label>
           </div>
         </form>
-        <p className=" read-only  py-5 rounded px-3 border-2">{encodeValue}</p>
+        <p data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000" className=" shadow-lg shadow-gray-200 read-only  py-5 rounded px-3 border-2">{encodeValue}</p>
         </div>
       </div>
     </div>
